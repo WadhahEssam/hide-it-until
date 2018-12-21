@@ -1,13 +1,4 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
   background: rgb(255,255,255);
   background: -moz-radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(103,103,103,1) 100%);
   background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(103,103,103,1) 100%);
@@ -20,17 +11,4 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
