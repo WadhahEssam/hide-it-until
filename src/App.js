@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import anime from 'animejs';
 import './App.css';
-import logo from './logo.svg';
+import logo from './logo.png';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import Button from '@material-ui/core/Button';
 import metamaskIcon from './metamask.png';
 import infoIcon from './info.png';
 import mainmenuIcon from './main.png';
+import uploadIcon from './upload.svg';
 import Tooltip from '@material-ui/core/Tooltip';
 
 const styles = theme => ({
@@ -45,7 +46,7 @@ class App extends Component {
 
   // animating the logo
   anime({
-    delay: 1500,
+    delay: 1000,
     targets: '#logo',
     opacity: 1,
     easing: 'easeInOutSine',
@@ -115,14 +116,13 @@ class App extends Component {
     return (
       <div className="App">
 
-          {/* <div id="logo" style={{opacity: 0}}> 
+          <div id="logo" style={{opacity: 0, marginBottom: 0}}> 
             <img src={logo} className="logo" alt="logo" height="50"/>
-          </div> */}
-
+          </div>
           <div id="menu-box" style={{backgroundColor: '#43484e', height: 20, width: 0, borderRadius: '100', margin: 10, opacity: 0, padding: 0, maxWidth: 500, display: 'flex' }}>
             <div id="menu-create-button" className="menu-button" style={{backgroundColor: 'white', height: '0', width: '90%', borderRadius: '100', margin: 5, opacity: 0 }} >
               <Tooltip title="Main" placement="top">
-                <Button id="create-button" className="material-menu-button" variant="contained" href="#contained-buttons" style={{ backgroundColor:'#DCDCDC', color: 'black', width: '100%', height: '100%', fontSize: 12, opacity: 1, zIndex: 2}}>
+                <Button id="create-button" className="material-menu-button" variant="contained" href="#contained-buttons" style={{ backgroundColor:'#b6b6b7', color: 'black', width: '100%', height: '100%', fontSize: 12, opacity: 1, zIndex: 2}}>
                   <img src={mainmenuIcon} height="60"/>
                 </Button>
               </Tooltip>
@@ -135,7 +135,7 @@ class App extends Component {
               </Tooltip>
             </div>
             <div id="menu-info-button" className="menu-button" style={{backgroundColor: 'white', height: '0', width: '90%', borderRadius: '100', margin: 5, opacity: 0 }}>
-              <Tooltip title="@About" placement="top">
+              <Tooltip title="About" placement="top">
                 <Button id="info-button" className="material-menu-button"  variant="contained" href="#contained-buttons" style={{ backgroundColor:'#DCDCDC', color: 'black', width: '100%', height: '100%', fontSize: 12, opacity: 1, zIndex: 2}}>
                   <img src={infoIcon} height="60"/>
                 </Button>
@@ -156,9 +156,11 @@ class App extends Component {
                 timeCaption="time"
                 className="main-datepicker"
             />
-            <Button id="send-button" variant="contained" href="#contained-buttons" style={{marginTop: 13, backgroundColor:'#608e60', color: 'white', width: 150, height: 50, fontSize: 20, opacity: 0}}>
-              SEND
-            </Button>
+            <Tooltip title="Upload to blockchain" placement="left">
+              <Button id="send-button" variant="contained" href="#contained-buttons" style={{marginTop: 13, backgroundColor:'#608e60', color: 'white', width: 150, height: 50, fontSize: 20, opacity: 0}}>
+                <img src={uploadIcon} height="40" width="60"/>
+              </Button>
+            </Tooltip>
           </div>
       </div>
     );
