@@ -38,7 +38,7 @@
 }
 
 .main-datepicker {
-  width: 216px;
+  width: 240px;
   margin-top: 5%;
   height: 26px;
   font-size: 14px;
@@ -47,6 +47,7 @@
   border-radius: 3px;
   border: none;
   opacity: 0;
+  text-align: center;
 }
 
 .st0{fill:#FFFFFF;stroke:#7F7F7F;stroke-miterlimit:10;}
