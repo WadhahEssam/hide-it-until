@@ -125,7 +125,7 @@ class App extends Component {
       <div className="App">
 
           <div id="logo" style={{opacity: 0, marginBottom: 0}}> 
-            <img src={logo} className="logo" alt="logo" height="50"/>
+            <img src={logo} id="logo-icon" className="logo" alt="logo"/>
           </div>
           <div id="menu-box" style={{backgroundColor: '#43484e', height: 20, width: 0, borderRadius: '100', margin: 10, opacity: 0, padding: 0, maxWidth: 500, display: 'flex' }}>
             <div id="menu-create-button" className="menu-button" style={{backgroundColor: 'white', height: '0', width: '90%', borderRadius: '100', margin: 5, opacity: 0 }} >
@@ -138,7 +138,7 @@ class App extends Component {
             <div id="menu-metamask-button" className="menu-button" style={{backgroundColor: 'white', height: '0', width: '90%', borderRadius: '100', margin: 5, marginRight: 0, marginLeft: 0, opacity: 0 }}>
               <Tooltip enterDelay={300} TransitionComponent={Zoom} title="Use Metamask" placement="top">
                 <Button id="via-metamask-button" className="material-menu-button" variant="contained" href="#contained-buttons" style={{ backgroundColor:'#DCDCDC', color: 'black', width: '100%', height: '100%', fontSize: 12, opacity: 1, zIndex: 2}}>
-                  <img src={metamaskIcon} height="45" style={{top: 1, position: 'relative'}}/>
+                  <img src={metamaskIcon} height="50" style={{top: 1, position: 'relative'}}/>
                 </Button>
               </Tooltip>
             </div>
@@ -166,7 +166,7 @@ class App extends Component {
             />
             <Tooltip enterDelay={300} TransitionComponent={Zoom} title="Upload to blockchain" placement="left">
               <Button id="send-button" variant="contained" href="#contained-buttons" style={{marginTop: 13, backgroundColor:'#608e60', color: 'white', width: 150, height: 50, fontSize: 20, opacity: 0}}>
-                <img src={uploadIcon} height="40" width="60"/>
+                <img src={uploadIcon} id="upload-button-icon" height="35" width="55"/>
               </Button>
             </Tooltip>
           </div>
