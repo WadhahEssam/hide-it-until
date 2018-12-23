@@ -50,5 +50,18 @@
   text-align: center;
 }
 
+#github-icon {
+  height: 25px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#github-icon:hover {
+  opacity: 0.5;
+}
+
 .st0{fill:#FFFFFF;stroke:#7F7F7F;stroke-miterlimit:10;}
 
+.active-icon {
+  filter: contrast(192%);
+}

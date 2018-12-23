@@ -9,7 +9,9 @@ import metamaskIcon from './metamask.png';
 import infoIcon from './info.png';
 import mainmenuIcon from './main.png';
 import uploadIcon from './upload.svg';
+import githubIcon from './github.svg';
 import Tooltip from '@material-ui/core/Tooltip';
+import Zoom from '@material-ui/core/Zoom';
 
 const styles = theme => ({
   button: {
@@ -40,9 +42,15 @@ class App extends Component {
   componentDidMount() {
 
   var basicTimeline = anime.timeline();
-  var motionDiv = anime.timeline();
+  var githubIcon = anime.timeline();
 
-
+  githubIcon
+    .add({
+      delay: 1500,
+      targets: '#github-icon',
+      duration: 500,
+      opacity: 0.3,
+    })
 
   // animating the logo
   anime({
@@ -121,21 +129,21 @@ class App extends Component {
           </div>
           <div id="menu-box" style={{backgroundColor: '#43484e', height: 20, width: 0, borderRadius: '100', margin: 10, opacity: 0, padding: 0, maxWidth: 500, display: 'flex' }}>
             <div id="menu-create-button" className="menu-button" style={{backgroundColor: 'white', height: '0', width: '90%', borderRadius: '100', margin: 5, opacity: 0 }} >
-              <Tooltip title="Main" placement="top">
+              <Tooltip enterDelay={300} TransitionComponent={Zoom} title="Main" placement="top">
                 <Button id="create-button" className="material-menu-button" variant="contained" href="#contained-buttons" style={{ backgroundColor:'#b6b6b7', color: 'black', width: '100%', height: '100%', fontSize: 12, opacity: 1, zIndex: 2}}>
-                  <img src={mainmenuIcon} height="60"/>
+                  <img src={mainmenuIcon} className="active-icon" height="60"/>
                 </Button>
               </Tooltip>
             </div>
             <div id="menu-metamask-button" className="menu-button" style={{backgroundColor: 'white', height: '0', width: '90%', borderRadius: '100', margin: 5, marginRight: 0, marginLeft: 0, opacity: 0 }}>
-              <Tooltip title="Use Metamask" placement="top">
+              <Tooltip enterDelay={300} TransitionComponent={Zoom} title="Use Metamask" placement="top">
                 <Button id="via-metamask-button" className="material-menu-button" variant="contained" href="#contained-buttons" style={{ backgroundColor:'#DCDCDC', color: 'black', width: '100%', height: '100%', fontSize: 12, opacity: 1, zIndex: 2}}>
-                  <img src={metamaskIcon} height="50" style={{top: 3}}/>
+                  <img src={metamaskIcon} height="45" style={{top: 1, position: 'relative'}}/>
                 </Button>
               </Tooltip>
             </div>
             <div id="menu-info-button" className="menu-button" style={{backgroundColor: 'white', height: '0', width: '90%', borderRadius: '100', margin: 5, opacity: 0 }}>
-              <Tooltip title="About" placement="top">
+              <Tooltip enterDelay={300} TransitionComponent={Zoom} title="About" placement="top">
                 <Button id="info-button" className="material-menu-button"  variant="contained" href="#contained-buttons" style={{ backgroundColor:'#DCDCDC', color: 'black', width: '100%', height: '100%', fontSize: 12, opacity: 1, zIndex: 2}}>
                   <img src={infoIcon} height="60"/>
                 </Button>
@@ -156,12 +164,15 @@ class App extends Component {
                 timeCaption="time"
                 className="main-datepicker"
             />
-            <Tooltip title="Upload to blockchain" placement="left">
+            <Tooltip enterDelay={300} TransitionComponent={Zoom} title="Upload to blockchain" placement="left">
               <Button id="send-button" variant="contained" href="#contained-buttons" style={{marginTop: 13, backgroundColor:'#608e60', color: 'white', width: 150, height: 50, fontSize: 20, opacity: 0}}>
                 <img src={uploadIcon} height="40" width="60"/>
               </Button>
             </Tooltip>
           </div>
+          <a href="">
+            <img id="github-icon" src={githubIcon} height="30"/>
+          </a>
       </div>
     );
   }
