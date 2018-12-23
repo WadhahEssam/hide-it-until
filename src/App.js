@@ -44,6 +44,9 @@ class App extends Component {
   var basicTimeline = anime.timeline();
   var githubIcon = anime.timeline();
 
+  let browserHeight = window.innerHeight;
+  let bodyBoxHeight = browserHeight * 0.7;
+
   githubIcon
     .add({
       delay: 1500,
@@ -90,7 +93,7 @@ class App extends Component {
       targets: '#body-box',
       duration: 400,
       // duration: 0,
-      height: '500',
+      height: bodyBoxHeight,
       borderRadius: '3',
       width: '95%',
       opacity: '1',
@@ -154,7 +157,7 @@ class App extends Component {
               </Tooltip>
             </div>
           </div>
-          <div id="body-box" style={{backgroundColor: '#43484e', minHeight: bodyBoxHeight, maxHeight: bodyBoxHeight, width: '90%', borderRadius: '100', margin: 10, marginTop: 2, opacity: 0, padding: 0, maxWidth: 500, display: 'flex', position: 'relative' }}>
+          <div id="body-box" style={{backgroundColor: '#43484e', height: 20, width: '90%', borderRadius: '100', margin: 10, marginTop: 2, opacity: 0, padding: 0, maxWidth: 500, display: 'flex', position: 'relative' }}>
             <textarea className="main-textarea">
 
             </textarea>
