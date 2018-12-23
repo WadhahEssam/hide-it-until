@@ -121,6 +121,10 @@ class App extends Component {
   }
 
   render() {
+
+    let browserHeight = window.innerHeight;
+    let bodyBoxHeight = browserHeight * 0.7;
+
     return (
       <div className="App">
 
@@ -150,7 +154,7 @@ class App extends Component {
               </Tooltip>
             </div>
           </div>
-          <div id="body-box" style={{backgroundColor: '#43484e', height: 20, width: '90%', borderRadius: '100', margin: 10, marginTop: 2, opacity: 0, padding: 0, maxWidth: 500, display: 'flex', position: 'relative' }}>
+          <div id="body-box" style={{backgroundColor: '#43484e', minHeight: bodyBoxHeight, maxHeight: bodyBoxHeight, width: '90%', borderRadius: '100', margin: 10, marginTop: 2, opacity: 0, padding: 0, maxWidth: 500, display: 'flex', position: 'relative' }}>
             <textarea className="main-textarea">
 
             </textarea>
@@ -165,7 +169,7 @@ class App extends Component {
                 className="main-datepicker"
             />
             <Tooltip enterDelay={300} TransitionComponent={Zoom} title="Upload to blockchain" placement="left">
-              <Button id="send-button" variant="contained" href="#contained-buttons" style={{marginTop: 13, backgroundColor:'#608e60', color: 'white', width: 150, height: 50, fontSize: 20, opacity: 0}}>
+              <Button id="send-button" variant="contained" href="#contained-buttons" style={{marginTop: 13, backgroundColor:'#608e60', color: 'white', width: 150, height: "10%", fontSize: 20, opacity: 0,}}>
                 <img src={uploadIcon} id="upload-button-icon" height="35" width="55"/>
               </Button>
             </Tooltip>

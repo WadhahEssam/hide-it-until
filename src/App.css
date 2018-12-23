@@ -28,7 +28,7 @@
 
 .main-textarea {
   width: 88%;
-  height: 67%;
+  height: 70%;
   margin-top: 4%;
   resize: none;
   border-radius: 3px;
@@ -88,6 +88,7 @@
   }
 
   #send-button {
-    height: 41px !important;
+    margin-bottom: 10px !important;
   }
+
 }
