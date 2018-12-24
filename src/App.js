@@ -65,7 +65,7 @@ class App extends Component {
   });
 
   anime({
-    delay: 150,
+    delay: 250,
     targets: '#menu-box',
     duration: 700,
     // duration: 0,
@@ -103,7 +103,7 @@ class App extends Component {
     .add({
       targets: '.main-textarea ,.main-datepicker, #send-button, .material-menu-button',
       // duration: 500,
-      duration: 400,
+      duration: 600,
       opacity: 1,
       easing: 'easeOutExpo',
     })
@@ -134,7 +134,7 @@ class App extends Component {
           <div id="logo" style={{opacity: 0, marginBottom: 0}}> 
             <img src={logo} id="logo-icon" className="logo" alt="logo"/>
           </div>
-          <div id="menu-box" style={{backgroundColor: '#43484e', height: 20, width: 0, borderRadius: '100', margin: 10, opacity: 0, padding: 0, maxWidth: 500, display: 'flex' }}>
+          <div id="menu-box" style={{backgroundColor: '#43484e', height: 20, width: 0, borderRadius: '100', margin: 10, minWidth: 325, opacity: 0, padding: 0, maxWidth: 500, display: 'flex' }}>
             <div id="menu-create-button" className="menu-button" style={{backgroundColor: 'white', height: '0', width: '90%', borderRadius: '100', margin: 5, opacity: 0 }} >
               <Tooltip enterDelay={300} TransitionComponent={Zoom} title="Main" placement="top">
                 <Button id="create-button" className="material-menu-button" variant="contained" href="#contained-buttons" style={{ backgroundColor:'#b6b6b7', color: 'black', width: '100%', height: '100%', fontSize: 12, opacity: 1, zIndex: 2}}>
@@ -157,7 +157,7 @@ class App extends Component {
               </Tooltip>
             </div>
           </div>
-          <div id="body-box" style={{backgroundColor: '#43484e', height: 20, width: '90%', borderRadius: '100', margin: 10, marginTop: 2, opacity: 0, padding: 0, maxWidth: 500, display: 'flex', position: 'relative' }}>
+          <div id="body-box" style={{backgroundColor: '#43484e', height: 20, width: '90%', borderRadius: '100', margin: 10, marginTop: 2, opacity: 0, padding: 0, minWidth: 325, maxWidth: 500, display: 'flex', position: 'relative' }}>
             <textarea className="main-textarea">
 
             </textarea>
